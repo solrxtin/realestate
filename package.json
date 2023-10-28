@@ -1,0 +1,14 @@
+{
+  "name": "mernestate",
+  "version": "1.0.0",
+  "description": "Real Estatet Listing Platfrom",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
