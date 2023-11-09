@@ -10,6 +10,9 @@ import SignUp from './pages/SignUp'
 
 // components
 import Header from './components/Header'
+import PrivateRouter from './components/PrivateRouter'
+import CreateListing from './pages/CreateListing'
+import Users from './pages/Users'
 
 const App = () => {
   return (
@@ -18,9 +21,14 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/profile' element={<Profile />} />
         <Route path='/register' element={<SignUp />} />
         <Route path='/login' element={<SignIn />} />
+        <Route path='/users' element={<Users />} />
+        <Route element={<PrivateRouter />} >
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/create-listing' element={<CreateListing />} />
+        </Route>
+        
       </Routes>
     </BrowserRouter>
   )
